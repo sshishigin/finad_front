@@ -74,12 +74,16 @@
                         </v-btn>
                       </template>
                       <template v-slot:default="dialog">
-                        <v-sheet outlined>
-                          <p class="text pa-12">{{ item.content }}</p>
-                          <v-btn @click="dialog.value = false" color="primary"
-                            >Понятно!
-                          </v-btn>
-                        </v-sheet>
+                        <v-card outlined class="text-center">
+                          <v-card-text class="text pa-12"
+                            >{{ item.content }}
+                          </v-card-text>
+                          <v-card-actions class="justify-center pb-6">
+                            <v-btn @click="dialog.value = false" color="primary"
+                              >Понятно!
+                            </v-btn>
+                          </v-card-actions>
+                        </v-card>
                       </template>
                     </v-dialog>
                   </v-list-item-title>
