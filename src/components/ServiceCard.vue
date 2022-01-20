@@ -1,18 +1,17 @@
 <template>
   <v-col cols="lg-4 sm-12">
-    <v-card class="col ma-4 text-center" elevation="5" shaped height="100%">
-      <v-card-media><v-img :src="service.icon" contain /></v-card-media>
-      <v-card-header class="font-weight-bold">
+    <v-card
+      :href="service.url"
+      class="col ma-4 text-center"
+      elevation="5"
+      shaped
+      height="100%"
+    >
+      <v-img :src="service.icon" contain />
+      <v-card-header class="font-weight-bold mt-4">
         {{ service.title }}
       </v-card-header>
       <v-card-text> {{ service.description }}</v-card-text>
-      <v-card-actions class="justify-center">
-        <router-link :to="service.url">
-          <v-btn rounded color="primary" :disabled="!service.active">
-            Перейти</v-btn
-          ></router-link
-        >
-      </v-card-actions>
     </v-card>
   </v-col>
 </template>
